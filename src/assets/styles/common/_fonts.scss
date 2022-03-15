@@ -1,0 +1,14 @@
+$nunito-src: '../../fonts/nunito/';
+$nunito-name: 'Nunito';
+
+@font-face {
+  font-family: $nunito-name;
+  src: url('#{$nunito-src}#{$nunito-name}.svg##{$nunito-name}-Light') format('svg'),
+      url('#{$nunito-src}#{$nunito-name}.ttf') format('truetype'),
+      url('#{$nunito-src}#{$nunito-name}.woff') format('woff'),
+      url('#{$nunito-src}#{$nunito-name}.woff2') format('woff2'),
+      url('#{$nunito-src}#{$nunito-name}.eot'),
+      url('#{$nunito-src}#{$nunito-name}.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
