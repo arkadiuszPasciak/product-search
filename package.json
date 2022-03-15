@@ -15,7 +15,8 @@
     "e2e:run:chrome": "cd e2e && ./node_modules/.bin/cypress run --browser chrome && cd ..",
     "e2e:wait-and-run:firefox": "./node_modules/.bin/wait-on http://localhost:1337/ && npm run e2e:run:firefox",
     "e2e:wait-and-run:chrome": "./node_modules/.bin/wait-on http://localhost:1337/ && npm run e2e:run:chrome",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs": "jsdoc -c jsdoc.conf.json"
   },
   "browserslist": {
     "production": [
@@ -45,7 +46,9 @@
     "@types/react": "17.0.34",
     "@types/react-dom": "17.0.11",
     "@types/react-router-dom": "5.3.2",
+    "better-docs": "^2.7.2",
     "craco-plugin-scoped-css": "^1.1.1",
+    "jsdoc": "^3.6.10",
     "node-sass": "^7.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
