@@ -1,0 +1,49 @@
+$srcIcons: '../../../assets/icons/';
+
+@mixin import($name) {
+  mask: url('#{$srcIcons}#{$name}.svg') center no-repeat no-repeat;
+}
+
+.UIIcon {
+  display: block;
+
+  &.black {
+    background-color: $cl-black1A;
+  }
+
+  &.orange {
+    background-color: $cl-orangeF9;
+  }
+
+  &.gray {
+    background-color: $cl-grayB9;
+  }
+
+  &.arrow {
+    @include import('arrow');
+  }
+
+  &.cart {
+    @include import('cart');
+  }
+
+  &.checkmark {
+    @include import('checkmark');
+  }
+
+  &.close {
+    @include import('close');
+  }
+
+  &.loop {
+    @include import('loop');
+  }
+
+  &.star-1 {
+    @include import('star-1');
+  }
+
+  &.star-2 {
+    @include import('star-2');
+  }
+}
