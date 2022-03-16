@@ -1,0 +1,56 @@
+.UIButton {
+  font: $font-regular 14px/16px $font-nunito;
+  border-radius: 4px;
+  padding: 11px;
+
+  @include hover(hover) {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    @include hover(hover) {
+      cursor: not-allowed;
+    }
+  }
+
+  &.primary {
+    background-color: $cl-blue44;
+    color: $cl-white;
+    
+    @include hover(hover) {
+      transition-property: background-color;
+
+      &:hover {
+        background-color: $cl-blue21;
+      }
+    }
+
+    &:disabled {
+      background-color: $cl-gray91;
+    }
+  }
+
+  &.secondary {
+    background-color: $cl-white;
+    color: $cl-blue44;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $cl-blue44;
+    
+    @include hover(hover) {
+      transition-property: border-color, color;
+
+      &:hover {
+        border-color: $cl-blue21;
+        color: $cl-blue21;
+      }
+    }
+
+    &:disabled {
+      border-color: $cl-gray91;
+      color: $cl-gray91;
+    }
+  }
+}
