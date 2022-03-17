@@ -1,0 +1,28 @@
+.UIInput {
+  border-radius: 8px;
+  border: 1px solid $cl-grayE0;
+  padding: 15px 20px;
+
+  &::placeholder {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &,
+  &::placeholder {
+    font: $font-regular 13px/20px $font-nunito;
+  }
+
+  &.primary {
+    background-color: $cl-white;
+    &,
+    &::placeholder {
+      color: $cl-black1A;
+    }
+  }
+}
