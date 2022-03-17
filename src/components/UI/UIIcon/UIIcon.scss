@@ -19,6 +19,10 @@ $srcIcons: '../../../assets/icons/';
     background-color: $cl-grayB9;
   }
 
+  &.white {
+    background-color: $cl-white;
+  }
+
   &.arrow {
     @include import('arrow');
   }
@@ -29,6 +33,8 @@ $srcIcons: '../../../assets/icons/';
 
   &.checkmark {
     @include import('checkmark');
+    width: 15px;
+    height: 15px;
   }
 
   &.close {
