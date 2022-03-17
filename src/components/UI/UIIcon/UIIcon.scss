@@ -41,9 +41,13 @@ $srcIcons: '../../../assets/icons/';
 
   &.star-1 {
     @include import('star-1');
+    width: 15px;
+    height: 16px;
   }
 
   &.star-2 {
     @include import('star-2');
+    width: 15px;
+    height: 16px;
   }
 }
