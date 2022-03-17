@@ -1,0 +1,52 @@
+.UICheckbox {
+  display: flex;
+  align-items: center;
+  
+  @include hover(hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  & > .checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: border-color, background-color;
+  }
+
+  .text {
+    font: $font-regular 13px/20px $font-nunito;
+    margin-left: 8px;
+    color: $cl-black1A;
+  }
+
+  &.primary {
+    .input {
+      &:checked {
+        & + .checkmark {
+          border-color: $cl-blue44;
+          background-color: $cl-blue44;
+        }
+      }
+    }
+
+    & > .checkmark {
+      border-color: $cl-grayE0;
+      background-color: $cl-white;
+    }
+  }
+}
