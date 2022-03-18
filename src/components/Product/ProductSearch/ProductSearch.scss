@@ -1,18 +1,25 @@
 .ProductSearch {
   display: flex;
-  justify-content: center;
 
   @include media('<=550px') {
     flex-direction: column;
   }
 
+  @include media('>=550px', '<=tablet') {
+    justify-content: space-between;
+  }
+
+  @include media('>=tablet') {
+    justify-content: center;
+  }
+
   .wrapper-input {
     position: relative;
-    width: 100%;
 
     @include media('<=550px') {
       margin-bottom: 25px;
       max-width: 350px;
+      width: 100%;
     }
 
     @include media('>=550px') {
@@ -20,7 +27,7 @@
     }
 
     @include media('>=desktop') {
-      max-width: 385px;
+      width: 385px;
     }
 
     & > .UIInput {

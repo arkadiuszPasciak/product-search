@@ -1,11 +1,10 @@
 .Header {
-  display: grid;
+  display: flex;
   background-color: $cl-white;
 
   @include media('<=tablet') {
     padding: 53px 24px 32px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 1fr;
+    flex-wrap: wrap;
   }
 
   @include media('>=tablet') {
@@ -13,7 +12,37 @@
     max-width: 1120px;
     width: 100%;
     padding: 48px 20px;
-    grid-template-columns: minmax(auto, 210px) minmax(auto, 390px) minmax(auto, 150px) minmax(auto, 370px);
-    grid-template-rows: 1fr;
+  }
+
+  @include media('<=desktop') {
+    justify-content: space-between;
+  }
+
+  & > .Logo {
+    @include media('<=tablet') {
+      order: 1;
+    }
+
+    @include media('>=desktop') {
+      margin-right: 105px;
+    }
+  }
+
+  & > .UIButton {
+    @include media('<=tablet') {
+      order: 2;
+      margin-bottom: 30px;
+    }
+
+    @include media('>=desktop') {
+      margin-left: auto;
+    }
+  }
+
+  & > .ProductSearch {
+    @include media('<=tablet') {
+      order: 3;
+      width: 100%;
+    }
   }
 }
