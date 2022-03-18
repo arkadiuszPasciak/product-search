@@ -1,15 +1,13 @@
 import { Redirect, Route, Switch } from 'react-router-dom'
-import { Login } from 'app/login/Login'
-import { Products } from 'app/products/Products'
+import { ProductList } from 'views/Product/ProductList/ProductList'
 import { AppRoute } from './AppRoute.enum'
 
 export const AppRoutes = () => {
   return (
     <Switch>
-      <Route path={AppRoute.Home} exact component={Products} />
-      <Route path={AppRoute.Login} component={Login} />
+      <Route path={AppRoute.ProductList} exact component={ProductList} />
 
-      <Redirect to={AppRoute.Home} />
+      <Redirect to={AppRoute.ProductList} />
     </Switch>
   )
 }
