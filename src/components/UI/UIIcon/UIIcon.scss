@@ -45,6 +45,8 @@ $srcIcons: '../../../assets/icons/';
 
   &.loop {
     @include import('loop');
+    width: 18px;
+    height: 18px;
   }
 
   &.star-1 {

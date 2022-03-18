@@ -1,0 +1,46 @@
+.ProductSearch {
+  display: flex;
+  justify-content: center;
+
+  @include media('<=550px') {
+    flex-direction: column;
+  }
+
+  .wrapper-input {
+    position: relative;
+    width: 100%;
+
+    @include media('<=550px') {
+      margin-bottom: 25px;
+      max-width: 350px;
+    }
+
+    @include media('>=550px') {
+      margin-right: 25px;
+    }
+
+    @include media('>=desktop') {
+      max-width: 385px;
+    }
+
+    & > .UIInput {
+      width: 100%;
+      padding-right: 40px;
+    }
+
+    & > .Logo {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .filters {
+    display: flex;
+
+    .UICheckbox:first-child {
+      margin-right: 30px;
+    }
+  }
+}
