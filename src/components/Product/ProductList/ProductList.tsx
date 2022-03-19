@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ProductListError } from 'components/Product/ProductListError/ProductListError'
-import { UILoader } from 'components/UI/UILoader/UILoader'
+import { ProductListLoader } from 'components/Product/ProductListLoader/ProductListLoader'
 import './ProductList.scss'
 
 export const ProductList = () => {
@@ -9,7 +9,7 @@ export const ProductList = () => {
 
   return (
     <div className="ProductList">
-      {isLoading && !isError && <UILoader />}
+      {isLoading && !isError && <ProductListLoader />}
       {isError && !isLoading && (
         <ProductListError
           title="Ooops… It’s empty here"
