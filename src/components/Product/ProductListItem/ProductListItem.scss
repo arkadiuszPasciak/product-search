@@ -7,6 +7,16 @@
   overflow: hidden;
   padding-bottom: 24px;
 
+  &.available {
+    position: relative;
+  }
+
+  &.unavailable {
+    > .UIImage {
+      filter: grayscale(100%);
+    }
+  }
+
   > .UIImage {
     height: 170px;
     margin-bottom: 16px;
@@ -19,6 +29,12 @@
 
   > .UIStars {
     margin: auto 10px 15px;
+  }
+
+  > .UIEmblem {
+    position: absolute;
+    top: 15px;
+    left: 0;
   }
 
   .title {

@@ -1,4 +1,5 @@
 import { UIButton } from 'components/UI/UIButton/UIButton'
+import { UIEmblem } from 'components/UI/UIEmblem/UIEmblem'
 import { UIImage } from 'components/UI/UIImage/UIImage'
 import { UIStars } from 'components/UI/UIStars/UIStars'
 import { ITSHProductList } from 'services/TSHService/TSHService.support'
@@ -17,7 +18,7 @@ export const ProductListItem = (props: Props) => {
 
       <p className="title">{name}</p>
 
-      {promo && <span className="emblem" />}
+      {promo && <UIEmblem text="promo" color="primary" />}
 
       <p className="description">{description}</p>
 
