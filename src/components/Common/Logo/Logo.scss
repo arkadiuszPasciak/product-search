@@ -9,4 +9,12 @@
       color: $cl-blue21;
     }
   }
+
+  @include media('<=tablet') {
+    font: $font-regular 24px/35px $font-nunito;
+  }
+
+  @include media('>=tablet') {
+    font: $font-regular 24px/52px $font-nunito;
+  }
 }

@@ -1,6 +1,23 @@
 .Header {
   display: flex;
-  background-color: $cl-white;
+
+  &::before {
+    @include media('>=tablet') {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      width: 100vw;
+      height: 150px;
+      background-color: $cl-white;
+    }
+  }
+
+  @include media('<=tablet') {
+    background-color: $cl-white;
+  }
 
   @include media('<=tablet') {
     padding: 53px 24px 32px;
@@ -14,8 +31,24 @@
     padding: 48px 20px;
   }
 
+  @include media('>=tablet', '<=1280px') {
+    padding: 48px 20px;
+  }
+
   @include media('<=desktop') {
     justify-content: space-between;
+  }
+
+  @include media('>=1280px') {
+    padding: 48px 0;
+  }
+
+  & > .Logo,
+  & > .ProductSearch,
+  & > .UIButton {
+    @include media('>=tablet') {
+      z-index: 2;
+    }
   }
 
   & > .Logo {
@@ -35,7 +68,8 @@
     }
 
     @include media('>=desktop') {
-      margin-left: auto;
+      margin: auto 0 auto auto;
+      height: 40px;
     }
   }
 
