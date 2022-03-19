@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { UIError } from 'components/UI/UIError/UIError'
+import { ProductListError } from 'components/Product/ProductListError/ProductListError'
 import { UILoader } from 'components/UI/UILoader/UILoader'
 import './ProductList.scss'
 
@@ -11,7 +11,7 @@ export const ProductList = () => {
     <div className="ProductList">
       {isLoading && !isError && <UILoader />}
       {isError && !isLoading && (
-        <UIError
+        <ProductListError
           title="Ooops… It’s empty here"
           description="There are no products on the list"
           iconName="cart"

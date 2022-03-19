@@ -1,5 +1,5 @@
 import { UIIcon } from 'components/UI/UIIcon/UIIcon'
-import './UIError.scss'
+import './ProductListError.scss'
 
 interface Props {
   title: string
@@ -8,11 +8,11 @@ interface Props {
   iconColor: string
 }
 
-export const UIError = (props: Props) => {
+export const ProductListError = (props: Props) => {
   const { title, description, iconName, iconColor } = props
 
   return (
-    <div className="UIError">
+    <div className="ProductListError">
       <UIIcon name={iconName} color={iconColor} />
       <p className="title">{title}</p>
       <p className="description">{description}</p>
