@@ -1,0 +1,9 @@
+.UIEmblem {
+  padding: 4px 15px;
+  font: $font-regular 14px/16px $font-nunito;
+
+  &.primary {
+    color: $cl-white;
+    background: $cl-orangeF9;
+  }
+}
