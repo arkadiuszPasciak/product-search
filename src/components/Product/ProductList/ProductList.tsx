@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { ProductListError } from 'components/Product/ProductListError/ProductListError'
+import { ProductListItem } from 'components/Product/ProductListItem/ProductListItem'
 import { ProductListLoader } from 'components/Product/ProductListLoader/ProductListLoader'
+import { MTSHProductList } from 'services/TSHService/TSHService.mocks'
 import './ProductList.scss'
 
 export const ProductList = () => {
@@ -20,14 +22,9 @@ export const ProductList = () => {
       )}
       {!isLoading && !isError && (
         <ul className="list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          {MTSHProductList.map((product) => {
+            return <ProductListItem product={product} key={product.id} />
+          })}
         </ul>
       )}
     </div>
