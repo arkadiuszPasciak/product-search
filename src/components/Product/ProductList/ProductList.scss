@@ -1,0 +1,22 @@
+.ProductList {
+  width: 100%;
+
+  @include media('<=tablet') {
+    padding: 24px 24px 40px;
+  }
+
+  @include media('>=tablet') {
+    padding: 55px 20px;
+  }
+
+  .list {
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+    max-width: 1225px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 288px));
+  }
+}
