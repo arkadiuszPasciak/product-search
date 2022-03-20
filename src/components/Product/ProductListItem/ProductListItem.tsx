@@ -1,6 +1,7 @@
 import { UIButton } from 'components/UI/UIButton/UIButton'
 import { UIEmblem } from 'components/UI/UIEmblem/UIEmblem'
 import { UIImage } from 'components/UI/UIImage/UIImage'
+import { UIModal } from 'components/UI/UIModal/UIModal'
 import { UIStars } from 'components/UI/UIStars/UIStars'
 import { ITSHProductList } from 'services/TSHService/TSHService.support'
 import './ProductListItem.scss'
@@ -29,6 +30,7 @@ export const ProductListItem = (props: Props) => {
         color="primary"
         disabled={!active}
       />
+      {active && <UIModal slot={'<p>123</p>'} show={false} />}
     </div>
   )
 }

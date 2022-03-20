@@ -41,6 +41,8 @@ $srcIcons: '../../../assets/icons/';
 
   &.close {
     @include import('close');
+    width: 18px;
+    height: 18px;
   }
 
   &.loop {
