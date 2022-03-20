@@ -1,0 +1,8 @@
+.ReactModalPortal {
+  position: relative;
+  z-index: 100;
+
+  .ReactModal__Overlay {
+    background-color: rgba($cl-black1A, 0.9) !important;
+  }
+}
