@@ -1,0 +1,9 @@
+.ProductPagination {
+  @include media('<=tablet') {
+    padding-bottom: 70px;
+  }
+
+  @include media('>=tablet') {
+    padding-bottom: 50px;
+  }
+}
