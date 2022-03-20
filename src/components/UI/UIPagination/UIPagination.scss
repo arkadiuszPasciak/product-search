@@ -1,0 +1,40 @@
+.UIPagination {
+  display: flex;
+  justify-content: center;
+
+  .link {
+    font: $font-regular 14px/16px $font-nunito;
+    color: $cl-black1A;
+    padding: 8px;
+
+    @include hover(hover) {
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: $cl-orangeF9;
+      }
+    }
+
+    &.active {
+      color: $cl-blue44;
+      pointer-events: none;
+    }
+
+    &.disabled {
+      color: $cl-gray91;
+      pointer-events: none;
+    }
+
+    &.first {
+      margin-right: 25px;
+    }
+
+    &.last {
+      margin-left: 25px;
+    }
+
+    &.dots {
+      pointer-events: none;
+    }
+  }
+}
