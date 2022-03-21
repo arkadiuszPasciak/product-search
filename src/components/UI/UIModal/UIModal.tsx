@@ -1,32 +1,42 @@
-import { useState } from 'react'
-import Modal from 'react-modal'
+import Modal, { OnAfterOpenCallbackOptions } from 'react-modal'
 import { UIIcon } from 'components/UI/UIIcon/UIIcon'
 import './UIModal.scss'
 
 interface Props {
-  slot: string
+  slot: JSX.Element
   show: boolean
+  onAfterOpen?: (e: OnAfterOpenCallbackOptions | undefined) => void
+  onCloseModal: (e: React.MouseEvent | React.KeyboardEvent) => void
 }
 
 export const UIModal = (prop: Props) => {
-  const { slot, show } = prop
+  const { slot, show, onAfterOpen, onCloseModal } = prop
 
-  const [modalIsOpen, setModal] = useState(show)
+  function afterOpenModal(e: OnAfterOpenCallbackOptions | undefined) {
+    if (!onAfterOpen) {
+      return
+    }
 
-  const toggleModal = (state: boolean) => {
-    setModal(state)
+    onAfterOpen(e)
+  }
+
+  function onModalClose(event: React.MouseEvent | React.KeyboardEvent) {
+    onCloseModal(event)
   }
 
   return (
     <Modal
       className="UIModal"
-      isOpen={modalIsOpen}
-      onRequestClose={() => toggleModal(false)}
+      isOpen={show}
+      onAfterOpen={(e) => afterOpenModal(e)}
+      ariaHideApp={false}
     >
-      {slot}
-      <button className="close" onClick={() => toggleModal(false)}>
-        <UIIcon name="close" color="black" />
-      </button>
+      <div className="container">
+        {slot}
+        <button className="close-modal" onClick={(e) => onModalClose(e)}>
+          <UIIcon name="close" color="black" />
+        </button>
+      </div>
     </Modal>
   )
 }

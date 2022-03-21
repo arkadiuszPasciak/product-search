@@ -1,0 +1,39 @@
+.ProductListItemModal {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+
+  > .UIImage {
+    margin-bottom: 25px;
+
+    @include media('>=desktop') {
+      min-height: 480px;
+    }
+  }
+
+  .name {
+    color: $cl-black1A;
+    font: $font-regular 24px/40px $font-nunito;
+
+    @include media('<=tablet') {
+      margin: 0 25px 5px;
+    }
+
+    @include media('>=tablet') {
+      margin: 0 30px 15px;
+    }
+  }
+
+  .description {
+    color: $cl-gray91;
+    font: $font-regular 18px/24px $font-nunito;
+
+    @include media('<=tablet') {
+      margin: 0 25px 20px;
+    }
+
+    @include media('>=tablet') {
+      margin: 0 30px 55px;
+    }
+  }
+}
