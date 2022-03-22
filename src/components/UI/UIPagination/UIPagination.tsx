@@ -1,26 +1,43 @@
+import { generatePath } from 'react-router'
 import { Link } from 'react-router-dom'
+import { AppRoute } from 'routing/AppRoute.enum'
 import './UIPagination.scss'
 
 interface Props {
   currentPage: number
   totalPage: number
   maxAmountOfSimplePagination?: number
+  routerParams: Record<string, string>
 }
 
 export const UIPagination = (props: Props) => {
-  const { currentPage, totalPage, maxAmountOfSimplePagination = 6 } = props
+  const {
+    currentPage,
+    totalPage,
+    maxAmountOfSimplePagination = 6,
+    routerParams,
+  } = props
 
   const checkCurrentPage =
     currentPage > totalPage || currentPage < 1 ? 1 : currentPage
 
   let HTMLPagesElement
 
+  const generateURL = (params: Record<string, string>, page: number) => {
+    return generatePath(AppRoute.ProductList, {
+      search: params.search,
+      page: page,
+      promo: params.promo,
+      active: params.active,
+    })
+  }
+
   const HTMLLinkElement = (page: number, currentPage: number) => {
     return (
       <Link
         className={`link ${page === currentPage ? 'active' : ''}`}
         key={page}
-        to={`/${page}`}
+        to={generateURL(routerParams, page)}
       >
         {page}
       </Link>
@@ -103,7 +120,7 @@ export const UIPagination = (props: Props) => {
         <div className="UIPagination">
           <Link
             className={`link first ${currentPage === 1 ? 'disabled' : ''}`}
-            to="1"
+            to={generateURL(routerParams, 1)}
           >
             First
           </Link>
@@ -114,7 +131,7 @@ export const UIPagination = (props: Props) => {
             className={`link last ${
               currentPage === totalPage ? 'disabled' : ''
             }`}
-            to={`/${totalPage}`}
+            to={generateURL(routerParams, totalPage)}
           >
             Last
           </Link>

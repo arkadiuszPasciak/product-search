@@ -55,6 +55,12 @@ export const ProductList = () => {
           <ProductPagination
             currentPage={productList.meta.currentPage}
             totalPage={productList.meta.totalPages}
+            routerParams={{
+              search: search,
+              page: page,
+              promo: promo,
+              active: active,
+            }}
           />
         </>
       )}
