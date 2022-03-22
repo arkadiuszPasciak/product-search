@@ -4,7 +4,7 @@ import './Logo.scss'
 
 export const Logo = () => {
   return (
-    <Link className="Logo" to={AppRoute.ProductList}>
+    <Link className="Logo" to={AppRoute.HomePage}>
       join.tsh.io
     </Link>
   )

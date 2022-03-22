@@ -2,10 +2,16 @@ import { useState } from 'react'
 import { ProductListError } from 'components/Product/ProductListError/ProductListError'
 import { ProductListItem } from 'components/Product/ProductListItem/ProductListItem'
 import { ProductListLoader } from 'components/Product/ProductListLoader/ProductListLoader'
-import { MTSHProductList } from 'services/TSHService/TSHService.mocks'
+import { ITSHProductList } from 'services/TSHService/TSHService.support'
 import './ProductList.scss'
 
-export const ProductList = () => {
+interface Props {
+  products: ITSHProductList[]
+}
+
+export const ProductList = (prop: Props) => {
+  const { products } = prop
+
   const [isLoading] = useState(false)
   const [isError] = useState(false)
 
@@ -22,7 +28,7 @@ export const ProductList = () => {
       )}
       {!isLoading && !isError && (
         <ul className="list">
-          {MTSHProductList.map((product) => {
+          {products.map((product) => {
             return <ProductListItem product={product} key={product.id} />
           })}
         </ul>
