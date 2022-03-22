@@ -7,7 +7,7 @@ export const AppRoutes = () => {
     <Switch>
       <Route path={AppRoute.ProductList} exact component={ProductList} />
 
-      <Redirect to={AppRoute.ProductList} />
+      <Redirect to={AppRoute.ProductListRedirect} />
     </Switch>
   )
 }
