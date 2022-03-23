@@ -19,8 +19,8 @@ export const ProductSearch = () => {
     const path = generatePath(AppRoute.ProductList, {
       search: searchInputValue,
       page: 1,
-      promo: filterPromo,
-      active: filterActive,
+      promo: filterPromo ? 'true' : 'undefined',
+      active: filterActive ? 'true' : 'undefined',
     })
 
     return path
