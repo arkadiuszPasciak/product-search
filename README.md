@@ -1,70 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and modified by TSH team for the recruit process.
+# IP Address Tracker
 
-## Quick Start
+The recruitment task for [The Software House](https://tsh.io/ "The Software House")
 
-To start the development:
+This is a ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) application powered by ![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) and ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) to search products by [Join TSH API](https://join-tsh-api-staging.herokuapp.com/docs/ "Join TSH API") 
 
+![view of project]()
+
+## Features
+
+- search product
+- list product
+- pagination
+- loader
+- error handling
+
+## Setup
+
+To run this project, install it locally using ![Build Status](https://img.shields.io/badge/node-14.16-%23659B60) ![Build Status](https://img.shields.io/badge/npm-6.14-%23CC3534)
 ```
-mkdir new-project
-cd new-project/
-git clone git@github.com:TheSoftwareHouse/react-interview-starter-ts.git .
-rm -r .git
 npm install
-cd e2e
-npm install
-cd ..
-cp .env.dist .env
-cp .env.e2e.dist ./e2e/.env
 ```
-
-where `new-project` is your desired folder.
-
-## E2E
-
-For E2E testing we are using the [Cypress](https://www.cypress.io/) framework. If you don't need it just remove e2e directory.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `e2e:run`
-
-Runs Cypress E2E tests in a headless mode (the browser window is not visible)
-
-### `e2e:open`
-
-Opens the Cypress UI, allowing to run and watch E2E tests
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run coverage`
-
-Launches the test runner in the coverage report generation mode.<br />
-See [this](https://create-react-app.dev/docs/running-tests/#coverage-reporting) section for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
+## Build
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+```
+## Usage
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run eject`
-
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+```
+npm start
+```
+## Tests
+Launches the test runner in the interactive watch mode.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm test
+```
+##  Eject
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
@@ -73,8 +55,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+##  Licenses
+- [Google Fonts](https://developers.google.com/fonts/ "Google Fonts")
+- [Join TSH API](https://join-tsh-api-staging.herokuapp.com/docs/ "Join TSH API") 
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
