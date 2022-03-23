@@ -1,0 +1,20 @@
+.ErrorPage {
+  min-height: 100vh;
+  background-color: $cl-grayF2;
+
+  @include media('>=tablet') {
+    position: relative;
+  }
+
+  > .main {
+    padding: 0 25px;
+
+    @include media('<=tablet') {
+      margin-top: 25px;
+    }
+
+    @include media('>=tablet') {
+      margin-top: 55px;
+    }
+  }
+}

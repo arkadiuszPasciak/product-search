@@ -1,4 +1,5 @@
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import { ErrorPage } from 'views/Error/ErrorPage/ErrorPage'
 import { ProductList } from 'views/Product/ProductList/ProductList'
 import { AppRoute } from './AppRoute.enum'
 
@@ -7,7 +8,7 @@ export const AppRoutes = () => {
     <Switch>
       <Route path={AppRoute.ProductList} exact component={ProductList} />
 
-      <Redirect to={AppRoute.ProductListRedirect} />
+      <Route component={ErrorPage} />
     </Switch>
   )
 }
