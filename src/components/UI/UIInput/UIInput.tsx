@@ -4,10 +4,11 @@ interface Props {
   name: string
   color: 'primary'
   placeholder: string
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export const UIInput = (props: Props) => {
-  const { name, color, placeholder } = props
+  const { name, color, placeholder, onChange } = props
 
   return (
     <input
@@ -15,6 +16,7 @@ export const UIInput = (props: Props) => {
       name={name}
       type="text"
       placeholder={placeholder}
+      onChange={onChange}
     />
   )
 }
