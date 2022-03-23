@@ -1,0 +1,49 @@
+$webfont-src: '../../fonts/webfont/';
+$webfont-name: 'Webfont';
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$webfont-src}#{$webfont-name}.eot?q5b6og');
+  src:  url('#{$webfont-src}#{$webfont-name}.eot?q5b6og#iefix') format('embedded-opentype'),
+    url('#{$webfont-src}#{$webfont-name}.ttf?q5b6og') format('truetype'),
+    url('#{$webfont-src}#{$webfont-name}.woff?q5b6og') format('woff'),
+    url('#{$webfont-src}#{$webfont-name}.svg?q5b6og#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='wf-'], [class*=' wf-'] {
+  font-family: 'icomoon';
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wf-arrow:before {
+  content: '\e906';
+}
+.wf-cart:before {
+  content: '\e905';
+}
+.wf-checkmark:before {
+  content: '\e904';
+}
+.wf-close:before {
+  content: '\e903';
+}
+.wf-loop:before {
+  content: '\e902';
+}
+.wf-star-1:before {
+  content: '\e901';
+}
+.wf-star-2:before {
+  content: '\e900';
+}
