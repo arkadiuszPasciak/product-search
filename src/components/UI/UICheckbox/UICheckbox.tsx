@@ -1,4 +1,3 @@
-import { UIIcon } from '../../UI/UIIcon/UIIcon'
 import './UICheckbox.scss'
 
 interface Props {
@@ -24,7 +23,7 @@ export const UICheckbox = (props: Props) => {
       />
 
       <span className="checkmark">
-        <UIIcon name="checkmark" color="white" />
+        <i className="wf-checkmark" />
       </span>
 
       <span className="text">{name}</span>

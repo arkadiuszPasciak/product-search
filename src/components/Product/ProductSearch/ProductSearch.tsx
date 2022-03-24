@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { UICheckbox } from 'components/UI/UICheckbox/UICheckbox'
 import { UIInput } from 'components/UI/UIInput/UIInput'
-import { UIIcon } from 'components/UI/UIIcon/UIIcon'
 import { generatePath, Link } from 'react-router-dom'
 import { AppRoute } from 'routing/AppRoute.enum'
 import './ProductSearch.scss'
@@ -37,10 +36,10 @@ export const ProductSearch = () => {
         />
 
         <Link
-          className={`Logo ${!searchInputValue ? 'disable' : ''}`}
+          className={`button ${!searchInputValue ? 'disable' : ''}`}
           to={setPath}
         >
-          <UIIcon name="loop" color="black" />
+          <i className="wf-loop" />
         </Link>
       </div>
 

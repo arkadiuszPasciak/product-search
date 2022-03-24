@@ -63,8 +63,6 @@ export const ProductList = () => {
           <ProductListError
             title="Ooops… It’s empty here"
             description="There are no products on the list"
-            iconName="cart"
-            iconColor="gray"
           />
         )}
         {productList && !isLoading && !isError && (
