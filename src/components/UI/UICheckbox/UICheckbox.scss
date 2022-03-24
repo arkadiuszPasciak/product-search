@@ -34,7 +34,15 @@
     color: $cl-black1A;
   }
 
+  .wf-checkmark {
+    font-size: 12px;
+  }
+
   &.primary {
+    .wf-checkmark {
+      color: $cl-white;
+    }
+
     .input {
       &:checked {
         & + .checkmark {

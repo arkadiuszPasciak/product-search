@@ -10,8 +10,6 @@ export const ErrorPage = () => {
         <ProductListError
           title="Ooops… It’s empty here"
           description="There are no products on the list"
-          iconName="cart"
-          iconColor="gray"
         />
       </main>
     </div>

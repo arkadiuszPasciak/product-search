@@ -1,5 +1,4 @@
 import Modal, { OnAfterOpenCallbackOptions } from 'react-modal'
-import { UIIcon } from 'components/UI/UIIcon/UIIcon'
 import './UIModal.scss'
 
 interface Props {
@@ -34,7 +33,7 @@ export const UIModal = (prop: Props) => {
       <div className="container">
         {slot}
         <button className="close-modal" onClick={(e) => onModalClose(e)}>
-          <UIIcon name="close" color="black" />
+          <i className="wf-close" />
         </button>
       </div>
     </Modal>

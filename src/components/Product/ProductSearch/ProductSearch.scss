@@ -35,16 +35,40 @@
       padding-right: 40px;
     }
 
-    & > .Logo {
+    & > .button {
       position: absolute;
       top: 50%;
-      right: 15px;
+      right: 10px;
       transform: translateY(-50%);
+      padding: 10px;
+
+      @include hover(hover) {
+        &:hover {
+          .wf-loop {
+            color: $cl-orangeF9;
+          }
+        }
+      }
 
       &.disable {
         pointer-events: none;
+
+        .wf-loop {
+          color: $cl-gray91;
+        }
+      }
+
+      .wf-loop {
+        color: $cl-black1A;
+        font-size: 18px;
+
+        @include hover(hover) {
+          transition: color 0.3s ease-in-out;
+        }
       }
     }
+
+
   }
 
   .filters {

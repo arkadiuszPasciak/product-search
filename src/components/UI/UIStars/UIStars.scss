@@ -2,7 +2,17 @@
   display: flex;
   margin: 0 -5px;
 
-  .UIIcon {
+  [class^='wf-'] {
     margin: 0 5px;
+    font-size: 13px;
   }
+
+  .wf-star-1 {
+    color: $cl-orangeF9;
+  }
+
+  .wf-star-2 {
+    color: $cl-grayB9;
+  }
+
 }
