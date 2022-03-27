@@ -21,16 +21,28 @@
     }
 
     &.disabled {
-      color: $cl-gray91;
+      color: $cl-gray6A;
       pointer-events: none;
     }
 
     &.first {
-      margin-right: 25px;
+      @include media('<=tablet') {
+        margin-right: 15px;
+      }
+
+      @include media('>=tablet') {
+        margin-right: 25px;
+      }
     }
 
     &.last {
-      margin-left: 25px;
+      @include media('<=tablet') {
+        margin-left: 15px;
+      }
+
+      @include media('>=tablet') {
+        margin-left: 25px;
+      }
     }
 
     &.dots {

@@ -23,11 +23,11 @@
     }
 
     @include media('>=550px') {
-      margin-right: 25px;
+      margin: auto 25px auto 0;
     }
 
     @include media('>=desktop') {
-      width: 385px;
+      width: 390px;
     }
 
     & > .UIInput {
@@ -54,13 +54,13 @@
         pointer-events: none;
 
         .wf-loop {
-          color: $cl-gray91;
+          color: $cl-gray72;
         }
       }
 
       .wf-loop {
         color: $cl-black1A;
-        font-size: 18px;
+        font-size: 17px;
 
         @include hover(hover) {
           transition: color 0.3s ease-in-out;

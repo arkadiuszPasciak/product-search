@@ -38,6 +38,7 @@ export const ProductSearch = () => {
         <Link
           className={`button ${!searchInputValue ? 'disable' : ''}`}
           to={setPath}
+          aria-label="search products"
         >
           <i className="wf-loop" />
         </Link>
