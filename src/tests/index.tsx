@@ -18,7 +18,7 @@ function customRender<Q extends Queries>(
 ): RenderResult<Q>
 function customRender<Q extends Queries>(
   ui: React.ReactElement,
-  options?: RenderOptions<Q> | Omit<RenderOptions, 'queries'>,
+  options?: RenderOptions<Q> | Omit<RenderOptions, 'queries'>
 ): RenderResult<Q> | RenderResult {
   return render<Q>(ui, { wrapper: options?.wrapper ?? Wrapper, ...options })
 }

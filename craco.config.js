@@ -1,9 +1,10 @@
-const sassResourcesLoader = require('craco-sass-resources-loader');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const sassResourcesLoader = require('craco-sass-resources-loader')
 
 module.exports = {
   mode: 'development',
   output: {
-    path: __dirname
+    path: __dirname,
   },
   plugins: [
     {
@@ -14,6 +15,6 @@ module.exports = {
       options: {
         resources: './src/assets/styles/_index.scss',
       },
-    }
-  ]
-};
+    },
+  ],
+}
