@@ -18,12 +18,12 @@ export const ProductListItem = (props: Props) => {
   const [modalIsOpen, showModal] = useState(false)
 
   return (
-    <div className={`ProductListItem ${active ? 'available' : 'unavailable'}`}>
-      <UIImage src={image} description={name} />
+    <li className={`ProductListItem ${active ? 'available' : 'unavailable'}`}>
+      <UIImage src={image} description={name} width={288} height={170} />
 
       <p className="title">{name}</p>
 
-      {promo && <UIEmblem text="promo" color="primary" />}
+      {promo && <UIEmblem text="Promo" color="primary" />}
 
       <p className="description">{description}</p>
 
@@ -48,6 +48,6 @@ export const ProductListItem = (props: Props) => {
           }
         />
       )}
-    </div>
+    </li>
   )
 }
