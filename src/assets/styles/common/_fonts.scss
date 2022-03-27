@@ -11,4 +11,5 @@ $nunito-name: 'Nunito';
       url('#{$nunito-src}#{$nunito-name}.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
